@@ -1,0 +1,138 @@
+/* Estilo para los contenedores de los proyectos */
+.project {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Estilo para las imágenes de los proyectos */
+.project img.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contenedor para los iconos de tecnologías dentro de las imágenes */
+.icons {
+    position: absolute;
+    bottom: 10px; /* Ajusta la distancia desde la parte inferior */
+    right: 10px; /* Ajusta la distancia desde la parte derecha */
+    display: flex;
+    gap: 5px; /* Espacio entre los iconos */
+}
+
+/* Estilo para cada icono */
+.icon {
+    width: 30px; /* Ajusta el tamaño del icono */
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Otros estilos previos */
+body {
+    background-color: rgb(0, 0, 0);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+body.fade-in {
+    opacity: 1;
+}
+
+.logoThony {
+    margin-top: 10px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 1s;
+}
+
+.code {
+    white-space: pre-wrap;
+    padding: 10px;
+    margin: 20px auto;
+    width: 80%;
+    background-color: #000;
+    color: #fff;
+    font-family: monospace;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 2s;
+    margin-bottom: 250px;
+}
+
+.projects-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    color: #fff;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.projects {
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    position: relative;
+    height: 100%;
+    z-index: 2;
+}
+
+.projects h2 {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.projects-items {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+    white-space: nowrap;
+    position: relative;
+}
+
+.project {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    margin: 0 10px;
+    width: 200px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    flex-shrink: 0;
+}
+
+.project:hover {
+    transform: scale(1.1);
+    background-color: #e0e0e0;
+}
+
+/* Fondo degradado detrás de los proyectos */
+.gradient-background {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #2d7faf, rgb(0, 0, 0) 70%);
+    z-index: 1;
+}
