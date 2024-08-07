@@ -105,3 +105,24 @@ function type() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const logo = document.getElementById('logoThony');
+    const socialMenu = document.getElementById('socialMenu');
+
+    logo.addEventListener('click', function(event) {
+        socialMenu.style.display = socialMenu.style.display === 'flex' ? 'none' : 'flex';
+        logo.classList.toggle('clicked');
+        event.stopPropagation(); // Evita que el clic se propague al body
+    });
+
+    document.body.addEventListener('click', function() {
+        if (socialMenu.style.display === 'flex') {
+            socialMenu.style.display = 'none';
+            logo.classList.remove('clicked');
+        }
+    });
+
+    socialMenu.addEventListener('click', function(event) {
+        event.stopPropagation(); // Evita que el clic se propague al body
+    });
+});

@@ -136,3 +136,50 @@ body.fade-in {
     background: linear-gradient(to top, #2d7faf, rgb(0, 0, 0) 70%);
     z-index: 1;
 }
+
+/* Estilo para el contenedor del menú de redes sociales */
+.social-menu {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 150px); /* Ajusta la posición para que se desplieguen hacia la derecha */
+    transform: translateY(-50%);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -410px;
+}
+
+.social-menu a {
+    margin: 10px; /* Reduce el margen entre las imágenes */
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-menu a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Mostrar el menú al hacer clic en el logo */
+.logoThony.clicked + .social-menu {
+    display: flex;
+    animation: slideRight 0.5s forwards;
+}
+
+/* Animación para desplegar el menú hacia la derecha */
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
