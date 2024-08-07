@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+body.fade-in.loaded {
+    opacity: 1;
+}
+
+.momentostatittle{
+    color: white;
+    margin-left: 700px;
+}
